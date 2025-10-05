@@ -5,11 +5,10 @@ import Navbar from '../../Components/Header/Navbar';
 
 const Root = () => {
     return (
-        <div>
+        <div className='max-w-7xl mx-auto px-4 font-sans'>
             <Navbar />
             <Outlet />
             <Footer />
-
         </div>
     );
 };

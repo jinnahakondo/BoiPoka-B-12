@@ -1,16 +1,18 @@
 import React from 'react';
+import { NavLink } from 'react-router';
 
 const Navbar = () => {
     const navLinks = <>
-        <li className='mr-4'>Home</li>
-        <li>about</li>
+        <NavLink to='/' >Home</NavLink>
+        <NavLink to='/books' >Listed Books</NavLink>
+        <NavLink to='/read'>Pages to Read</NavLink>
     </>
     return (
         <div>
-            <div className="navbar bg-base-100 shadow-sm">
+            <div className="navbar bg-base-100 px-0 ">
                 <div className="navbar-start">
                     <div className="dropdown">
-                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden">
+                        <div tabIndex={0} role="button" className="btn btn-ghost lg:hidden pl-0">
                             <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h8m-8 6h16" /> </svg>
                         </div>
                         <ul
@@ -19,15 +21,16 @@ const Navbar = () => {
                             {navLinks}
                         </ul>
                     </div>
-                    <a className="btn btn-ghost text-xl">daisyUI</a>
+                    <a className="btn btn-ghost font-bold text-lg lg:text-3xl pl-0">Book Vibe</a>
                 </div>
-                <div className="navbar-center hidden lg:flex">
-                    <ul className="menu menu-horizontal px-1">
+                <div className="navbar-center hidden lg:flex" >
+                    <ul className="menu menu-horizontal px-1 gap-4 text-lg flex items-center ">
                         {navLinks}
                     </ul>
                 </div>
                 <div className="navbar-end">
-                    <a className="btn">Button</a>
+                    <a className="btn bg-[#23BE0A] text-white text-xs px-4 py-0.5 lg:px-7 lg:py-4 mr-4 rounded-lg">Sign In</a>
+                    <a className="btn bg-[#59C6D2] text-white text-xs px-4 py-0.5 lg:px-7 lg:py-4 mr-4 rounded-lg">Sign Up</a>
                 </div>
             </div>
         </div>
